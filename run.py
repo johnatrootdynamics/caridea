@@ -27,7 +27,7 @@ except KeyError:
 
 app = create_app(app_config)
 
-# Create tables & Fallback to SQLite
+# kCreate tables & Fallback to SQLite
 with app.app_context():
     
     try:
