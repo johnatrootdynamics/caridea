@@ -83,6 +83,8 @@ def register():
 
         username = request.form['username']
         email = request.form['email']
+        phone = request.form['phone']
+        
 
         # Check usename exists
         user = Users.query.filter_by(username=username).first()
