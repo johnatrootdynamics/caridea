@@ -20,6 +20,17 @@ class Users(db.Model, UserMixin):
     email         = db.Column(db.String(64), unique=True)
     password      = db.Column(db.LargeBinary)
     bio           = db.Column(db.Text(), nullable=True)
+    phone         = db.Column(db.Text(), nullable=False)
+    ad_street     = db.Column(db.Text(), nullable=False)
+    ad_city       = db.Column(db.Text(), nullable=False)
+    ad_state      = db.Column(db.Text(), nullable=False)
+    ad_country    = db.Column(db.Text(), nullable=False)
+    ad_zip        = db.Column(db.Text(), nullable=False)
+    id_verified   = db.Column(db.Boolean(), nullable=False)
+
+
+
+
 
     oauth_github  = db.Column(db.String(100), nullable=True)
     oauth_google  = db.Column(db.String(100), nullable=True)
@@ -46,7 +57,11 @@ class Users(db.Model, UserMixin):
     @classmethod
     def find_by_email(cls, email: str) -> "Users":
         return cls.query.filter_by(email=email).first()
-
+    
+    @classmethod
+    def find_by_phone(cls, phone: int) -> "Users":
+        return cls.query.filter_by(phone=phone).first()
+    
     @classmethod
     def find_by_username(cls, username: str) -> "Users":
         return cls.query.filter_by(username=username).first()
@@ -54,6 +69,8 @@ class Users(db.Model, UserMixin):
     @classmethod
     def find_by_id(cls, _id: int) -> "Users":
         return cls.query.filter_by(id=_id).first()
+    
+
    
     def save(self) -> None:
         try:
