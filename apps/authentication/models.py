@@ -59,7 +59,7 @@ class Users(db.Model, UserMixin):
         return cls.query.filter_by(email=email).first()
     
     @classmethod
-    def find_by_phone(cls, phone: int) -> "Users":
+    def find_by_phone(cls, phone: str) -> "Users":
         return cls.query.filter_by(phone=phone).first()
     
     @classmethod
