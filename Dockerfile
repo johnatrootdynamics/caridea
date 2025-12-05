@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 run export FLASK_APP=run.py
 COPY . .
 
-#RUN flask db init # to be executed only once
+RUN flask db init # to be executed only once
 
 RUN flask db migrate # Generate migration SQL
 RUN flask db upgrade # Apply changes
