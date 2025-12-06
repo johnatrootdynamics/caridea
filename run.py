@@ -14,7 +14,7 @@ load_dotenv()
 from apps.config import config_dict
 from apps import create_app, db
 
-# WARNING: Don't run with debug turned on in production!
+# WARNING: Don't run with debug turned on in production!!
 DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
 # The configuration
