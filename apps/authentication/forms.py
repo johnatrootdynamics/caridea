@@ -29,6 +29,21 @@ class CreateAccountForm(FlaskForm):
     password = PasswordField('Password',
                              id='pwd_create',
                              validators=[DataRequired()])
-    phone = StringField('phone',
+    phone = StringField('Phone',
                       id='phone_create',
+                      validators=[DataRequired()])
+    ad_street = StringField('Street',
+                      id='street_create',
+                      validators=[DataRequired()])
+    ad_city = StringField('City',
+                      id='city_create',
+                      validators=[DataRequired()])
+    ad_state = StringField('State',
+                      id='state_create',
+                      validators=[DataRequired()])
+    ad_country = StringField('Country',
+                      id='country_create',
+                      validators=[DataRequired()])
+    birthday = DateField('Birthday',
+                      id='dob_create', format='%Y-%m-%d',
                       validators=[DataRequired()])
