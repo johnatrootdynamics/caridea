@@ -38,6 +38,9 @@ class CreateAccountForm(FlaskForm):
     ad_city = StringField('City',
                       id='city_create',
                       validators=[DataRequired()])
+    ad_zip = StringField('Zip',
+                      id='zip_create',
+                      validators=[DataRequired()])
     ad_state = StringField('State',
                       id='state_create',
                       validators=[DataRequired()])
