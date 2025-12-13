@@ -26,7 +26,7 @@ class Users(db.Model, UserMixin):
     ad_state      = db.Column(db.Text(), nullable=False)
     ad_country    = db.Column(db.Text(), nullable=False)
     ad_zip        = db.Column(db.Text(), nullable=False)
-    id_verified   = db.Column(db.Boolean(), default=False,server_default="0" nullable=False)
+    id_verified   = db.Column(db.Boolean(), default=False, server_default="0", nullable=False)
     birthday      = db.Column(db.DateTime(), nullable=False)
 
 
