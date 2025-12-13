@@ -90,8 +90,6 @@ def register():
         ad_zip = request.form['ad_zip']
         ad_country = request.form['ad_country']
         birthday = request.form['birthday']
-        id_verified = False
-
 
         # Check usename exists
         user = Users.query.filter_by(username=username).first()
