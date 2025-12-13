@@ -84,11 +84,11 @@ def register():
         username = request.form['username']
         email = request.form['email']
         phone = request.form['phone']
-        ad_street = request.form['street']
-        ad_city = request.form['city']
-        ad_state = request.form['state']
-        ad_zip = request.form['zip']
-        ad_country = request.form['country']
+        ad_street = request.form['ad_street']
+        ad_city = request.form['ad_city']
+        ad_state = request.form['ad_state']
+        ad_zip = request.form['ad_zip']
+        ad_country = request.form['ad_country']
         birthday = request.form['birthday']
 
 
