@@ -20,33 +20,33 @@ class LoginForm(FlaskForm):
 
 
 class CreateAccountForm(FlaskForm):
-    username = StringField('Username',
+    username = StringField('username',
                          id='username_create',
                          validators=[DataRequired()])
-    email = StringField('Email',
+    email = StringField('email',
                       id='email_create',
                       validators=[DataRequired(), Email()])
-    password = PasswordField('Password',
+    password = PasswordField('password',
                              id='pwd_create',
                              validators=[DataRequired()])
-    phone = StringField('Phone',
+    phone = StringField('phone',
                       id='phone_create',
                       validators=[DataRequired()])
-    ad_street = StringField('Street',
+    ad_street = StringField('street',
                       id='street_create',
                       validators=[DataRequired()])
-    ad_city = StringField('City',
+    ad_city = StringField('city',
                       id='city_create',
                       validators=[DataRequired()])
-    ad_zip = StringField('Zip',
+    ad_zip = StringField('zip',
                       id='zip_create',
                       validators=[DataRequired()])
-    ad_state = StringField('State',
+    ad_state = StringField('state',
                       id='state_create',
                       validators=[DataRequired()])
-    ad_country = StringField('Country',
+    ad_country = StringField('country',
                       id='country_create',
                       validators=[DataRequired()])
-    birthday = StringField('Birthday',
+    birthday = StringField('birthday',
                       id='dob_create',
                       validators=[DataRequired()])
