@@ -44,6 +44,6 @@ class CreateAccountForm(FlaskForm):
     ad_country = StringField('Country',
                       id='country_create',
                       validators=[DataRequired()])
-    birthday = DateField('Birthday',
+    birthday = StringField('Birthday',
                       id='dob_create', format='%Y-%m-%d',
                       validators=[DataRequired()])
